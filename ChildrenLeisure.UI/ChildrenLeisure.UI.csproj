@@ -8,12 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.3.0" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ChildrenLeisure.BLL\ChildrenLeisure.BLL.csproj" />
     <ProjectReference Include="..\ChildrenLeisure.DAL\ChildrenLeisure.DAL.csproj" />
+    <ProjectReference Include="..\ChildrenLeisure.DI\ChildrenLeisure.DI.csproj" />
   </ItemGroup>
 
 </Project>

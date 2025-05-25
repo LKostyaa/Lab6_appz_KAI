@@ -1,14 +1,9 @@
-﻿using ChildrenLeisure.BLL.DTOs;
+﻿using System;
+using Autofac;
+using ChildrenLeisure.BLL.DTOs;
 using ChildrenLeisure.BLL.Interfaces;
-using ChildrenLeisure.BLL.Services;
 using ChildrenLeisure.DAL.Data;
-using ChildrenLeisure.DAL.Interfaces;
-using ChildrenLeisure.DAL.UnitOfWork;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
-using AutoMapper;
-using ChildrenLeisure.BLL.Mapping;
+using ChildrenLeisure.DI;
 
 namespace ChildrenLeisure.UI
 {
@@ -19,20 +14,17 @@ namespace ChildrenLeisure.UI
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.InputEncoding = System.Text.Encoding.UTF8;
 
-            using var context = new AppDbContext();
+            var builder = new ContainerBuilder();
+            builder.RegisterModule<DependencyConfig>();
+            var container = builder.Build();
+
+            using var scope = container.BeginLifetimeScope();
+
+            var context = scope.Resolve<AppDbContext>();
             context.Database.EnsureCreated();
 
-            var config = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<MappingProfile>();
-            });
-            var mapper = config.CreateMapper();
-
-            // Unit of Work та сервіси
-            var unitOfWork = new UnitOfWork(context);
-            var pricingService = new PricingService();
-            var entertainmentService = new EntertainmentService(unitOfWork, mapper);
-            var orderService = new OrderService(unitOfWork, pricingService, mapper);
+            var entertainmentService = scope.Resolve<IEntertainmentService>();
+            var orderService = scope.Resolve<IOrderService>();
 
             while (true)
             {
@@ -183,7 +175,6 @@ namespace ChildrenLeisure.UI
                     Console.WriteLine("Замовлення не знайдено.");
                     return;
                 }
-
                 DisplayOrderDetails(order);
             }
         }
@@ -199,7 +190,6 @@ namespace ChildrenLeisure.UI
                     Console.WriteLine("Замовлення не знайдено.");
                     return;
                 }
-
                 DisplayOrderDetails(order);
             }
         }

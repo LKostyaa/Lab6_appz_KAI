@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "13HB7QhOwOs=",
+  "dgSpecHash": "dg/4fZzSgkU=",
   "success": true,
   "projectFilePath": "C:\\Users\\chema\\Desktop\\APPZ\\Lab6_appz\\ChildrenLeisure.UI\\ChildrenLeisure.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\chema\\.nuget\\packages\\autofac\\8.3.0\\autofac.8.3.0.nupkg.sha512",
+    "C:\\Users\\chema\\.nuget\\packages\\autofac.extensions.dependencyinjection\\10.0.0\\autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
     "C:\\Users\\chema\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\chema\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\chema\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

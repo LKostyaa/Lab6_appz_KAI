@@ -70,3 +70,8 @@ C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\obj\Debug\net8.0\refint
 C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\obj\Debug\net8.0\ChildrenLeisure.UI.pdb
 C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\obj\Debug\net8.0\ChildrenLeisure.UI.genruntimeconfig.cache
 C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\obj\Debug\net8.0\ref\ChildrenLeisure.UI.dll
+C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\obj\Debug\net8.0\ChildrenLeisure.UI.sourcelink.json
+C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\bin\Debug\net8.0\Autofac.dll
+C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll
+C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\bin\Debug\net8.0\ChildrenLeisure.DI.dll
+C:\Users\chema\Desktop\APPZ\Lab6_appz\ChildrenLeisure.UI\bin\Debug\net8.0\ChildrenLeisure.DI.pdb

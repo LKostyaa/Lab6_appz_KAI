@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildrenLeisure.DAL", "Chil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChildrenLeisure.UI", "ChildrenLeisure.UI\ChildrenLeisure.UI.csproj", "{F6839B8F-5700-49C7-8924-D1963FB397D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChildrenLeisure.DI", "ChildrenLeisure.DI\ChildrenLeisure.DI.csproj", "{455A899D-5944-4E0A-B4FD-981EC44C27E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F6839B8F-5700-49C7-8924-D1963FB397D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6839B8F-5700-49C7-8924-D1963FB397D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6839B8F-5700-49C7-8924-D1963FB397D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455A899D-5944-4E0A-B4FD-981EC44C27E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455A899D-5944-4E0A-B4FD-981EC44C27E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455A899D-5944-4E0A-B4FD-981EC44C27E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455A899D-5944-4E0A-B4FD-981EC44C27E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

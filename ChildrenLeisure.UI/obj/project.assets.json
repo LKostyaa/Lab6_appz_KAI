@@ -2,6 +2,39 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "Autofac/8.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Autofac.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Autofac.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "8.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.1"
+        },
+        "compile": {
+          "lib/net8.0/Autofac.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Autofac.Extensions.DependencyInjection.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "AutoMapper/12.0.1": {
         "type": "package",
         "dependencies": {
@@ -672,10 +705,72 @@
         "runtime": {
           "bin/placeholder/ChildrenLeisure.DAL.dll": {}
         }
+      },
+      "ChildrenLeisure.DI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Autofac": "8.3.0",
+          "Autofac.Extensions.DependencyInjection": "10.0.0",
+          "ChildrenLeisure.BLL": "1.0.0",
+          "ChildrenLeisure.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ChildrenLeisure.DI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChildrenLeisure.DI.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Autofac/8.3.0": {
+      "sha512": "0Bv8aSKuK4nQAiDKw3+pIv9hUhbPwS63ql9KhjR6DRgE14UNdXrMqO8YMI0PnffZPyCrMs85lNhZRI4eBgQO4w==",
+      "type": "package",
+      "path": "autofac/8.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "autofac.8.3.0.nupkg.sha512",
+        "autofac.nuspec",
+        "icon.png",
+        "lib/net6.0/Autofac.dll",
+        "lib/net6.0/Autofac.xml",
+        "lib/net7.0/Autofac.dll",
+        "lib/net7.0/Autofac.xml",
+        "lib/net8.0/Autofac.dll",
+        "lib/net8.0/Autofac.xml",
+        "lib/netstandard2.0/Autofac.dll",
+        "lib/netstandard2.0/Autofac.xml",
+        "lib/netstandard2.1/Autofac.dll",
+        "lib/netstandard2.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/10.0.0": {
+      "sha512": "ZjR/onUlP7BzQ7VBBigQepWLAyAzi3VRGX3pP6sBqkPRiT61fsTZqbTpRUKxo30TMgbs1o3y6bpLbETix4SJog==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "icon.png",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net6.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/net7.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net7.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.xml",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard2.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
     "AutoMapper/12.0.1": {
       "sha512": "hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
       "type": "package",
@@ -1593,12 +1688,20 @@
       "type": "project",
       "path": "../ChildrenLeisure.DAL/ChildrenLeisure.DAL.csproj",
       "msbuildProject": "../ChildrenLeisure.DAL/ChildrenLeisure.DAL.csproj"
+    },
+    "ChildrenLeisure.DI/1.0.0": {
+      "type": "project",
+      "path": "../ChildrenLeisure.DI/ChildrenLeisure.DI.csproj",
+      "msbuildProject": "../ChildrenLeisure.DI/ChildrenLeisure.DI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Autofac >= 8.3.0",
+      "Autofac.Extensions.DependencyInjection >= 10.0.0",
       "ChildrenLeisure.BLL >= 1.0.0",
       "ChildrenLeisure.DAL >= 1.0.0",
+      "ChildrenLeisure.DI >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 9.0.5"
     ]
   },
@@ -1635,6 +1738,9 @@
             },
             "C:\\Users\\chema\\Desktop\\APPZ\\Lab6_appz\\ChildrenLeisure.DAL\\ChildrenLeisure.DAL.csproj": {
               "projectPath": "C:\\Users\\chema\\Desktop\\APPZ\\Lab6_appz\\ChildrenLeisure.DAL\\ChildrenLeisure.DAL.csproj"
+            },
+            "C:\\Users\\chema\\Desktop\\APPZ\\Lab6_appz\\ChildrenLeisure.DI\\ChildrenLeisure.DI.csproj": {
+              "projectPath": "C:\\Users\\chema\\Desktop\\APPZ\\Lab6_appz\\ChildrenLeisure.DI\\ChildrenLeisure.DI.csproj"
             }
           }
         }
@@ -1654,6 +1760,14 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Autofac": {
+            "target": "Package",
+            "version": "[8.3.0, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[9.0.5, )"
